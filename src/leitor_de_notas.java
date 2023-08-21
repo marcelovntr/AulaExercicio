@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class leitor_de_notas {
@@ -8,16 +10,23 @@ public class leitor_de_notas {
 	Scanner input=new Scanner (System.in);
 	
 		
+	List<Double> notas=new ArrayList<>(); 
 	int soma=0;	
 		
-	for(int i=1;i<=5;i++) {
+	for(int i=0;i<5;i++) {
 		System.out.println("digite a nota de 5 alunos:");
-		int nota=input.nextInt();
-		soma+=nota;
+		notas.add(input.nextDouble());
+		soma+=notas.get(i);
 	
 	}
 	
-	System.out.println("total: "+soma);
+	System.out.println("total: "+notas.size());
+	System.out.println(soma);
+	
+	
+	
+	
+	
 	
 	input.close();
 	}
